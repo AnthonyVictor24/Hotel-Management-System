@@ -1,6 +1,10 @@
+import models.Hospital;
+
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println("Hello world!");
+        Hospital h = new Hospital("XYZ","ADDXYZ",123,"XYZ@");
+        h.appointDoctor("MBBS","Victor",73389,"Heart surgeon",100000,"12.30 - 3.30");
+        h.createRoom();
+        h.admitPatient("Vicky",26,75502,"vicky@007","Male","Nothing");
     }
 }

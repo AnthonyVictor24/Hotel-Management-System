@@ -4,14 +4,15 @@ public class Patient {
     String pId;
     String name;
     int age;
-    Long phoneNumber;
+    long phoneNumber;
     String email;
     String gender;
     String disease;
     Doctor doctor;
     Room room;
+    boolean isAdmit;
 
-    public Patient(String pId, String name, int age, Long phoneNumber, String email, String gender, String disease,Doctor doctor,Room room) {
+    public Patient(String pId, String name, int age, long phoneNumber, String email, String gender, String disease,Doctor doctor,Room room,boolean isAdmit) {
         this.pId = pId;
         this.name = name;
         this.age = age;
@@ -21,7 +22,9 @@ public class Patient {
         this.disease = disease;
         this.doctor = doctor;
         this.room = room;
+        this.isAdmit = isAdmit;
     }
+
 
     public String getpId() {
         return pId;
@@ -77,5 +80,21 @@ public class Patient {
 
     public void setDisease(String disease) {
         this.disease = disease;
+    }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "pId='" + pId + '\'' +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", phoneNumber=" + phoneNumber +
+                ", email='" + email + '\'' +
+                ", gender='" + gender + '\'' +
+                ", disease='" + disease + '\'' +
+                ", doctor=" + doctor +
+                ", room=" + room +
+                ", isAdmit=" + isAdmit +
+                '}';
     }
 }
