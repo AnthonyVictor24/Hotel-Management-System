@@ -73,6 +73,7 @@ public class Hospital {
         //create patient obj.
         Patient p = new Patient(pId,name,age,phoneNumber,email,gender,disease,doctor,room,true);
         doctor.patientList.add(p);
+        patientDatabase.addPatient(p);
         System.out.println("Patient got admitted successfully -> " + p);
 
     }
